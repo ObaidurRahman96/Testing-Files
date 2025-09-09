@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "6dc2fc52-8913-45f1-bb15-ce0049d9f18a",
+		"name": "Wireguard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27664655"
+	},
+	"item": [
+		{
+			"name": "Get user Information by Apple transaction id and UUID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c2tYsewMgzonbQRma2xqanNsZGZrc2xrZGZqc2xramZsc2RramZsc2tkZmpsa2RzZg==++",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transaction_id",
+							"value": "2000000947056719",
+							"type": "text"
+						},
+						{
+							"key": "uuid",
+							"value": "6D03E98D-9F65-4527-9DF1-BF0C94702A74",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://vpn-dev-api-python.interlinkapi.com/api/v2/user",
+					"protocol": "http",
+					"host": [
+						"vpn-dev-api-python",
+						"interlinkapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Client on Selected VPN Server",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c2tYsewMgzonbQRma2xqandfNsZGZrc2xrZGZqc2xramZsc2YnluQwBxZsc2tkZmpsa2RzZg==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transaction_id",
+							"value": "200000071781332",
+							"type": "text"
+						},
+						{
+							"key": "public_key",
+							"value": "tcT1P3aAQ17PXsn1ykpjVEz1FX8ckG5ZhfYcjNOpNl0=",
+							"type": "text"
+						},
+						{
+							"key": "allowed_ips",
+							"value": "10.12.0.2/32",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://137.184.193.124:8080/add-peer",
+					"protocol": "http",
+					"host": [
+						"137",
+						"184",
+						"193",
+						"124"
+					],
+					"port": "8080",
+					"path": [
+						"add-peer"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
